@@ -6,15 +6,15 @@
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 14:24:54 by falberti          #+#    #+#             */
-/*   Updated: 2024/11/06 14:49:17 by falberti         ###   ########.fr       */
+/*   Updated: 2024/11/06 16:12:38 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "phonebook.hpp"
+#include "Phonebook.class.hpp"
 
 int main(void)
 {
-    //Phonebook   pbook;
+    Phonebook   pbook;
     std::string str;
 
     while (str != "EXIT")
