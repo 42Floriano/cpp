@@ -3,16 +3,18 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: albertini <albertini@student.42.fr>        +#+  +:+       +#+         #
+#    By: falberti <falberti@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/18 15:39:27 by cgodecke          #+#    #+#              #
-#    Updated: 2024/10/31 11:31:27 by albertini        ###   ########.fr        #
+#    Updated: 2024/11/06 14:38:45 by falberti         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 C++ = c++
 C++_FLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
-INFILES = 	phonebook.cpp\
+INFILES = 	phonebook.hpp\
+			main.cpp\
+			
 
 OBJFILES = $(INFILES:.cpp=.o)
 
