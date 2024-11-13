@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
+/*   By: albertini <albertini@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 14:24:54 by falberti          #+#    #+#             */
-/*   Updated: 2024/11/06 16:12:38 by falberti         ###   ########.fr       */
+/*   Updated: 2024/11/13 11:57:54 by albertini        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,18 @@ int main(void)
         std::cout << "Enter command> ";
         std::getline(std::cin, str);
         if (str == "ADD")
-            std::cout << "Adding";
+		{
+			pbook.add();
+		}
         if (str == "SEARCH")
-            std::cout << "Searching";
+		{
+			pbook.search();
+		}
         if (std::cin.eof())
+		{
             return (0);
-        std::cout << std::endl;
+        	std::cout << std::endl;
+		}
     }
     return (0);
 }

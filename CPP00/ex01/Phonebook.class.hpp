@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Phonebook.class.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
+/*   By: albertini <albertini@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 14:37:08 by falberti          #+#    #+#             */
-/*   Updated: 2024/11/06 17:09:44 by falberti         ###   ########.fr       */
+/*   Updated: 2024/11/13 12:15:16 by albertini        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,19 @@
 class Phonebook
 {
     private:
-        Contact contact[8];
+        Contact _contact[8];
         int     _index;
     public:
         Phonebook(void);
         ~Phonebook(void);
         void    add(void);
         void    search(void);
+		void	print(Contact contact);
+		Contact	get_contact(int index);
 };
+
+std::string	add_space(int n);
+std::string	fix_width(std::string str, long unsigned max);
+int	search_ui(Contact contact[8]);
 
 #endif

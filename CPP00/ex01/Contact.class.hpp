@@ -3,17 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.class.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
+/*   By: albertini <albertini@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 16:52:32 by falberti          #+#    #+#             */
-/*   Updated: 2024/11/06 17:01:43 by falberti         ###   ########.fr       */
+/*   Updated: 2024/11/13 11:56:55 by albertini        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CONTACT_CLASS_HPP
 # define CONTACT_CLASS_HPP
 
-# include "Phonebook.class.hpp"
+# include <iostream>
+# include <string>
 
 class Contact
 {
