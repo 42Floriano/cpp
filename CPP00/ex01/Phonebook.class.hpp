@@ -6,7 +6,7 @@
 /*   By: albertini <albertini@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 14:37:08 by falberti          #+#    #+#             */
-/*   Updated: 2024/11/13 12:15:16 by albertini        ###   ########.fr       */
+/*   Updated: 2024/11/13 14:21:32 by albertini        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ class Phonebook
 };
 
 std::string	add_space(int n);
-std::string	fix_width(std::string str, long unsigned max);
-int	search_ui(Contact contact[8]);
+std::string	fix_size(std::string str, int unsigned max);
+int	print_phonebook(Contact contact[8]);
 
 #endif
