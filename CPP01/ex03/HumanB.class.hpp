@@ -6,7 +6,7 @@
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 14:15:13 by falberti          #+#    #+#             */
-/*   Updated: 2024/11/14 14:48:14 by falberti         ###   ########.fr       */
+/*   Updated: 2024/11/14 16:06:47 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@
 class HumanB
 {
     private:
+        std::string _name;
         Weapon *_weapon;
-        std::string type;
     public:
         HumanB(std::string name);
         ~HumanB(void);

@@ -6,7 +6,7 @@
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 14:15:13 by falberti          #+#    #+#             */
-/*   Updated: 2024/11/14 14:51:24 by falberti         ###   ########.fr       */
+/*   Updated: 2024/11/14 16:06:23 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,13 @@
 class HumanA
 {
     private:
+        std::string _name;
         Weapon &_weapon;
-        std::string type;
     public:
         HumanA(std::string name, Weapon &weapon);
         ~HumanA(void);
         void        attack(void);
         void        set_name(std::string name);
-        void        set_weapon(Weapon &weapon);
         std::string get_name(void);
 };
 

@@ -6,7 +6,7 @@
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 14:14:27 by falberti          #+#    #+#             */
-/*   Updated: 2024/11/14 14:35:56 by falberti         ###   ########.fr       */
+/*   Updated: 2024/11/14 16:10:30 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ Weapon::Weapon(std::string name)
 {
     set_type(name);
     std::cout << "Weapon constructor called" << std::endl;
-    std::cout << "Type sets to:" << this->get_type() << std::endl;
+    std::cout << "Type sets to: " << this->get_type() << std::endl;
 }
 
 Weapon::~Weapon(void)
