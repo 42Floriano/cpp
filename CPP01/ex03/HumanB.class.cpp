@@ -6,7 +6,7 @@
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 14:19:37 by falberti          #+#    #+#             */
-/*   Updated: 2024/11/14 16:12:49 by falberti         ###   ########.fr       */
+/*   Updated: 2024/11/14 16:18:33 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,5 @@ void    HumanB::attack(void)
     if (this->_weapon != NULL)
         std::cout << this->get_name() << " attacks with " << this->_weapon->get_type() << std::endl;
     else 
-        std::cout << this->get_name() << " attacks without weapin!" << std::endl;
+        std::cout << this->get_name() << " attacks without weapon!" << std::endl;
 }

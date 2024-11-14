@@ -6,7 +6,7 @@
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 17:45:28 by albertini         #+#    #+#             */
-/*   Updated: 2024/11/14 16:11:56 by falberti         ###   ########.fr       */
+/*   Updated: 2024/11/14 16:18:16 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,18 @@ int main()
 		jim.attack();
 		club.set_type("some other type of club");
 		jim.attack();
+		std::cout << "----------------------------------------------------- " << std::endl;
+	}
+	std::cout << std::endl;
+	std::cout << std::endl;
+	{
+		std::cout << "Case 3 ---------------------------------------------- " << std::endl;
+		HumanB alice("Alice");
+		std::cout << "----------------------------------------------------- " << std::endl;
+		alice.attack();
+		Weapon shotgun = Weapon("Shotgun");
+		alice.set_weapon(shotgun);
+		alice.attack();
 		std::cout << "----------------------------------------------------- " << std::endl;
 	}
 	return 0;
