@@ -6,7 +6,7 @@
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 09:33:04 by albertini         #+#    #+#             */
-/*   Updated: 2024/11/18 12:21:59 by falberti         ###   ########.fr       */
+/*   Updated: 2024/11/18 13:32:26 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,19 @@
 # include <iostream>
 # include <string>
 
-# define ARGS 0
-# define EMPTY 1
-# define INPUT 2
-# define OUTPUT 3
+class Harl
+{
+    private:
+        void debug(void);
+        void info(void);
+        void warning(void);
+        void error(void);
+    public:
+        Harl(void);
+        ~Harl(void);
+        void complain(std::string level);
+};
+
+typedef void (Harl::*HarlFunction)(void);
 
 #endif
