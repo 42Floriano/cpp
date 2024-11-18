@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Header.hpp                                         :+:      :+:    :+:   */
+/*   header.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albertini <albertini@student.42.fr>        +#+  +:+       +#+        */
+/*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 09:33:04 by albertini         #+#    #+#             */
-/*   Updated: 2024/11/18 09:34:23 by albertini        ###   ########.fr       */
+/*   Updated: 2024/11/18 11:40:44 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,11 @@
 
 # include <iostream>
 # include <string>
+# include <fstream>
 
-# define 
+# define ARGS 0
+# define EMPTY 1
+# define INPUT 2
+# define OUTPUT 3
 
 #endif

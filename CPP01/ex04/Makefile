@@ -6,7 +6,7 @@
 #    By: falberti <falberti@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/18 15:39:27 by cgodecke          #+#    #+#              #
-#    Updated: 2024/11/14 13:12:55 by falberti         ###   ########.fr        #
+#    Updated: 2024/11/18 11:24:54 by falberti         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ INFILES = main.cpp\
 
 OBJFILES = $(INFILES:.cpp=.o)
 
-NAME = zombies
+NAME = replace
 
 all: $(NAME)
 
