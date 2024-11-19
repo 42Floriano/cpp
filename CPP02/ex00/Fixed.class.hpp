@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.class.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albertini <albertini@student.42.fr>        +#+  +:+       +#+        */
+/*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 09:33:04 by albertini         #+#    #+#             */
-/*   Updated: 2024/11/18 23:13:50 by albertini        ###   ########.fr       */
+/*   Updated: 2024/11/19 14:55:25 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@
 class Fixed
 {
 	private:
-		int const	_ic;
-		int			*_i;
+		static int const	_ic;
+		int			_i;
 	public:
 		//Default Constructor
 		Fixed(void);
