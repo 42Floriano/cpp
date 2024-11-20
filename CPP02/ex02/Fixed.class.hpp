@@ -6,7 +6,7 @@
 /*   By: albertini <albertini@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 09:33:04 by albertini         #+#    #+#             */
-/*   Updated: 2024/11/19 18:01:53 by albertini        ###   ########.fr       */
+/*   Updated: 2024/11/20 09:45:34 by albertini        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,8 @@ class Fixed
 		Fixed operator/(Fixed const &rhs) const;
 		Fixed &operator++(void); // Prefix (++F)
 		Fixed &operator--(void); // Prefix (--F)
-		Fixed operator++(int n); // Postfix (++F)
-		Fixed operator--(int n); // Postfix (++F)
+		Fixed operator++(int); // Postfix (F++)
+		Fixed operator--(int); // Postfix (F++)
 		// min & max
 		static Fixed &min(Fixed &a, Fixed &b);
 		static Fixed &max(Fixed &a, Fixed &b);
