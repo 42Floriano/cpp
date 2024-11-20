@@ -12,32 +12,43 @@
 
 #include "DiamondTrap.class.hpp"
 
-Diamond::Diamond(std::string name) : _name(name), _hp(10), _energy(10), _attack(0)
+Diamond::Diamond(std::string name) : ClapTrap(name + "_clap_name"), FragTrap(name), ScavTrap(name), _name(name)
 {
-	std::cout << "Default constructor called" << std::endl;
+	this->_hp = FragTrap::_hp;
+	this->_energy = ScavTrap::_energy;
+	this->_attack = FragTrap::_attack;
+	std::cout << "Diamond constructor called" << std::endl;
 }
 
 // Copy constructor
-Diamond::Diamond(const Diamond& value)
-    : _name(value._name), _hp(value._hp), _energy(value._energy), _attack(value._attack) {
-    std::cout << "Copy constructor called" << std::endl;
+Diamond::Diamond(const Diamond& other)
+    :  ClapTrap(other), FragTrap(other), ScavTrap(other), _name(other._name) {
+    std::cout << "Diamond Copy constructor called" << std::endl;
 }
 
 // Assignment operator
 Diamond& Diamond::operator=(const Diamond& rhs) {
-    if (this != &rhs) { // Check for self-assignment
-        this->_name = rhs._name;
-        this->_hp = rhs._hp;
-        this->_energy = rhs._energy;
-        this->_attack = rhs._attack;
+    if (this != &rhs) { 
+		ClapTrap::operator=(rhs);
+        _name = rhs._name;
+		std::cout << "Diamond Assigment oparator called" << std::endl;
     }
     return *this;
 }
 
 // Destructor
 Diamond::~Diamond() {
-    std::cout << "Destructor called" << std::endl;
+    std::cout << "Diamond Destructor called" << std::endl;
 }
 
 //Methodes
 
+void Diamond::attack(const std::string &target)
+{
+	ScavTrap::attack(target);
+}
+
+void Diamond::whoAmI() {
+    std::cout << "I am DiamondTrap: " << this->_name
+              << " and my ClapTrap name is: " << ClapTrap::_name << std::endl;
+}

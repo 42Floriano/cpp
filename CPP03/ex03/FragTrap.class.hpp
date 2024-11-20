@@ -6,7 +6,7 @@
 /*   By: albertini <albertini@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 09:33:04 by albertini         #+#    #+#             */
-/*   Updated: 2024/11/20 16:01:12 by albertini        ###   ########.fr       */
+/*   Updated: 2024/11/20 22:21:18 by albertini        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include "ClapTrap.class.hpp"
 
 
-class FragTrap : public ClapTrap
+class FragTrap : virtual public ClapTrap
 {
 	public:
 		//Constructor

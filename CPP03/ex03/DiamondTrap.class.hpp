@@ -18,29 +18,28 @@
 # include <cmath>
 # include "ClapTrap.class.hpp"
 # include "ScavTrap.class.hpp"
+# include "FragTrap.class.hpp"
 
 
 
-class Diamond
+class Diamond : public FragTrap, public ScavTrap
 {
 	protected:
 		std::string			_name;
-		int					_hp;
-		unsigned int		_energy;
-		unsigned int		_attack;
+
 	public:
 		//Default Constructor
 		//Constructor
 		Diamond(std::string name);
-		//Constructor
-		Diamond(std::string name, int hp, unsigned int energy, unsigned int attack);
 		//Copy Constructor 
-		Diamond(const Diamond &value);
+		Diamond(const Diamond &other);
    		//Assigment Opperator
 		Diamond &operator=(const Diamond &rhs);
 		//Destructor
 		~Diamond(void);
 		//Methods
+		void whoAmI(void);
+		void attack(const std::string &target);
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: albertini <albertini@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 12:21:30 by falberti          #+#    #+#             */
-/*   Updated: 2024/11/20 15:54:14 by albertini        ###   ########.fr       */
+/*   Updated: 2024/11/20 22:48:34 by albertini        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void	ScavTrap::attack(const std::string &target)
 {
 	if (this->getEnergy() > 0)
 	{
-		std::cout << this->getName() << " attacks with special ScavTrap" << target << " for " << this->getAttack() << " damages " << std::endl;
+		std::cout << this->getName() << " attacks with special ScavTrap technic" << target << " for " << this->getAttack() << " damages " << std::endl;
 		this->_energy--;
 	}
 	else 
