@@ -6,118 +6,62 @@
 /*   By: albertini <albertini@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 12:21:30 by falberti          #+#    #+#             */
-/*   Updated: 2024/11/20 15:17:20 by albertini        ###   ########.fr       */
+/*   Updated: 2024/11/20 15:54:14 by albertini        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.class.hpp"
 
-ClapTrap::ClapTrap(std::string name) : _name(name), _hp(10), _energy(10), _attack(0)
+ScavTrap::ScavTrap() : ClapTrap("DefaultScav")
 {
-	std::cout << "Default constructor called" << std::endl;
+	this->_hp = 100;
+	this->_energy = 50;
+	this->_attack = 20;
+	std::cout << "ScavTrap constructor called" << std::endl;
 }
 
-ClapTrap::ClapTrap(std::string name, int hp, unsigned int energy, unsigned int attack) : _name(name), _hp(hp), _energy(energy), _attack(attack)
+ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
-	std::cout << "World Boss constructor called" << std::endl;
+	this->_hp = 100;
+	this->_energy = 50;
+	this->_attack = 20;
+	std::cout << "ScavTrap constructor called" << std::endl;
 }
+
 
 // Copy constructor
-ClapTrap::ClapTrap(const ClapTrap& value)
-    : _name(value._name), _hp(value._hp), _energy(value._energy), _attack(value._attack) {
-    std::cout << "Copy constructor called" << std::endl;
+ScavTrap::ScavTrap(const ScavTrap &other) : ClapTrap(other)
+{
+    std::cout << "ScavTrap Copy constructor called" << std::endl;
 }
 
 // Assignment operator
-ClapTrap& ClapTrap::operator=(const ClapTrap& rhs) {
-    if (this != &rhs) { // Check for self-assignment
-        this->_name = rhs._name;
-        this->_hp = rhs._hp;
-        this->_energy = rhs._energy;
-        this->_attack = rhs._attack;
+ScavTrap& ScavTrap::operator=(const ScavTrap& rhs) {
+    if (this != &rhs) 
+	{ // Check for self-assignment
+       ClapTrap::operator=(rhs);
     }
     return *this;
 }
 
 // Destructor
-ClapTrap::~ClapTrap() {
-    std::cout << "Destructor called" << std::endl;
+ScavTrap::~ScavTrap() {
+    std::cout << "ScavTrap Destructor called" << std::endl;
 }
 
 //Methodes
-void	ClapTrap::attack(const std::string &target)
+void	ScavTrap::attack(const std::string &target)
 {
 	if (this->getEnergy() > 0)
 	{
-		std::cout << this->getName() << " attacks " << target << " for " << this->getAttack() << " damages " << std::endl;
-		this->setEnergy(this->getEnergy() - 1);
+		std::cout << this->getName() << " attacks with special ScavTrap" << target << " for " << this->getAttack() << " damages " << std::endl;
+		this->_energy--;
 	}
 	else 
 		std::cout << "Not enough energy" << std::endl;
 }
 
-void	ClapTrap::takeDamage(unsigned int ammount)
+void	ScavTrap::guardGate(void)
 {
-	if (this->getHp() > 0)
-	{
-		std::cout << this->getName() << " recieves " <<  ammount << " damages " << std::endl;
-		this->setHp(this->getHp() - ammount);
-		if (this->getHp() < 0)
-			this->setHp(0);
-	}
-	else std::cout << this->getName() << " is dead already!" << std::endl;
-}
-
-void	ClapTrap::heal(unsigned int ammount)
-{
-	if (this->getEnergy() > 0)
-	{
-		std::cout << this->getName() << " uses auto-heal for " << ammount << " HP " << std::endl;
-		this->setEnergy(this->getEnergy() - 1);
-	}
-	else 
-		std::cout << "Not enough energy" << std::endl;
-
-}
-
-// Getter
-std::string 	ClapTrap::getName() const
-{
-	return (this->_name);
-}
-
-unsigned int	ClapTrap::getEnergy() const
-{
-	return (this->_energy);
-}
-
-int	ClapTrap::getHp() const
-{
-	return (this->_hp);
-}
-
-unsigned int	ClapTrap::getAttack() const
-{
-	return (this->_attack);
-}
-
-// Setter
-void ClapTrap::setName(std::string name)
-{
-	this->_name = name;
-}
-
-void ClapTrap::setEnergy(unsigned int energy)
-{
-	this->_energy = energy;
-}
-
-void ClapTrap::setHp(int hp)
-{
-	this->_hp = hp;
-}
-
-void ClapTrap::setAttack(unsigned int attack)
-{
-	this->_attack = attack;
+		std::cout << this->getName() << " is now guarding the gate!" << std::endl;
 }

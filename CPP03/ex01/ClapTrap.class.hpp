@@ -6,7 +6,7 @@
 /*   By: albertini <albertini@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 09:33:04 by albertini         #+#    #+#             */
-/*   Updated: 2024/11/20 14:35:01 by albertini        ###   ########.fr       */
+/*   Updated: 2024/11/20 15:46:14 by albertini        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@
 
 class ClapTrap
 {
-	private:
+	protected:
 		std::string			_name;
-		int		_hp;
+		int					_hp;
 		unsigned int		_energy;
 		unsigned int		_attack;
 	public:
@@ -41,8 +41,6 @@ class ClapTrap
 		void	attack(const std::string &target);
 		void	takeDamage(unsigned int ammount);
 		void	heal(unsigned int ammount);
-		//Operators
-		// min & max
 		//Getters & Setters
 		std::string	getName() const;
 		unsigned int	getEnergy() const;

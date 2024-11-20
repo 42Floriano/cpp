@@ -6,7 +6,7 @@
 #    By: albertini <albertini@student.42.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/18 15:39:27 by cgodecke          #+#    #+#              #
-#    Updated: 2024/11/20 15:15:51 by albertini        ###   ########.fr        #
+#    Updated: 2024/11/20 15:55:54 by albertini        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ INFILES = main.cpp\
 
 OBJFILES = $(INFILES:.cpp=.o)
 
-NAME = fixed
+NAME = scavtrap
 
 all: $(NAME)
 

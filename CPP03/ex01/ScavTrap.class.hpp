@@ -6,7 +6,7 @@
 /*   By: albertini <albertini@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 09:33:04 by albertini         #+#    #+#             */
-/*   Updated: 2024/11/20 15:17:13 by albertini        ###   ########.fr       */
+/*   Updated: 2024/11/20 15:55:32 by albertini        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,38 +21,19 @@
 
 class ScavTrap : public ClapTrap
 {
-	private:
-		std::string			_name;
-		int		_hp;
-		unsigned int		_energy;
-		unsigned int		_attack;
 	public:
-		//Default Constructor
 		//Constructor
-		ClapTrap(std::string name);
-		//Constructor
-		ClapTrap(std::string name, int hp, unsigned int energy, unsigned int attack);
+		ScavTrap(void);
+		ScavTrap(std::string name);
 		//Copy Constructor 
-		ClapTrap(const ClapTrap &value);
+		ScavTrap(const ScavTrap &other);
    		//Assigment Opperator
-		ClapTrap &operator=(const ClapTrap &rhs);
+		ScavTrap &operator=(const ScavTrap &rhs);
 		//Destructor
-		~ClapTrap(void);
+		~ScavTrap(void);
 		//Methods
 		void	attack(const std::string &target);
-		void	takeDamage(unsigned int ammount);
-		void	heal(unsigned int ammount);
-		//Operators
-		// min & max
-		//Getters & Setters
-		std::string	getName() const;
-		unsigned int	getEnergy() const;
-		int	getHp() const;
-		unsigned int	getAttack() const;
-		void setName(std::string name);
-		void setEnergy(unsigned int energy);
-		void setHp(int hp);
-		void setAttack(unsigned int attack);
+		void	guardGate(void);
 };
 
 #endif
