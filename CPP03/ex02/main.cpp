@@ -6,33 +6,33 @@
 /*   By: albertini <albertini@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 09:32:09 by albertini         #+#    #+#             */
-/*   Updated: 2024/11/20 16:02:34 by albertini        ###   ########.fr       */
+/*   Updated: 2024/11/20 16:07:09 by albertini        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "ClapTrap.class.hpp"
-#include "ScavTrap.class.hpp"
+#include "FragTrap.class.hpp"
 
 int main() 
 {
-    std::cout << "--- Creating ScavTrap with Default Constructor ---" << std::endl;
-    ScavTrap scavDefault;
+    std::cout << "--- Creating FragTrap with Default Constructor ---" << std::endl;
+    FragTrap fragDefault;
 
-    std::cout << "--- Creating ScavTrap with Parameterized Constructor ---" << std::endl;
-    ScavTrap scavParam("Scavvy");
+    std::cout << "--- Creating FragTrap with Parameterized Constructor ---" << std::endl;
+    FragTrap fragParam("Fraggy");
 
     std::cout << "--- Testing Copy Constructor ---" << std::endl;
-    ScavTrap scavCopy = scavParam;
+    FragTrap fragvCopy = fragParam;
 
     std::cout << "--- Testing Assignment Operator ---" << std::endl;
-    scavDefault = scavParam;
+    fragDefault = fragParam;
 
     std::cout << "--- Testing Unique Methods ---" << std::endl;
-    scavParam.guardGate();
+    fragParam.highFivesGuys();
 
-    std::cout << "--- Testing Overridden Attack ---" << std::endl;
-    scavParam.attack("Enemy");
+    std::cout << "--- Testing Heritated Attack ---" << std::endl;
+    fragParam.attack("Enemy");
 
     std::cout << "--- Testing Destruction Order ---" << std::endl;
     return 0;
