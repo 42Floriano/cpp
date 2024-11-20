@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.class.hpp                                 :+:      :+:    :+:   */
+/*   ScavTrap.class.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: albertini <albertini@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 09:33:04 by albertini         #+#    #+#             */
-/*   Updated: 2024/11/20 14:35:01 by albertini        ###   ########.fr       */
+/*   Updated: 2024/11/20 15:17:13 by albertini        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLAPTRAP_CLASS_HAPP
-# define CLAPTRAP_CLASS_HAPP
+#ifndef SCAVTRAP_CLASS_HAPP
+# define SCAVTRAP_CLASS_HAPP
 
 # include <iostream>
 # include <string>
 # include <cmath>
+# include "ClapTrap.class.hpp"
 
 
-class ClapTrap
+class ScavTrap : public ClapTrap
 {
 	private:
 		std::string			_name;

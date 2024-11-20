@@ -6,12 +6,13 @@
 /*   By: albertini <albertini@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 09:32:09 by albertini         #+#    #+#             */
-/*   Updated: 2024/11/20 15:08:43 by albertini        ###   ########.fr       */
+/*   Updated: 2024/11/20 15:17:34 by albertini        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "ClapTrap.class.hpp"
+#include "ScavTrap.class.hpp"
 
 int main() {
     // Create ClapTrap objects

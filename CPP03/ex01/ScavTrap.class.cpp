@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.class.cpp                                 :+:      :+:    :+:   */
+/*   ScavTrap.class.cpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: albertini <albertini@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 12:21:30 by falberti          #+#    #+#             */
-/*   Updated: 2024/11/20 15:09:06 by albertini        ###   ########.fr       */
+/*   Updated: 2024/11/20 15:17:20 by albertini        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.class.hpp"
+#include "ScavTrap.class.hpp"
 
 ClapTrap::ClapTrap(std::string name) : _name(name), _hp(10), _energy(10), _attack(0)
 {
