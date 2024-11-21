@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.class.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albertini <albertini@student.42.fr>        +#+  +:+       +#+        */
+/*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 09:33:04 by albertini         #+#    #+#             */
-/*   Updated: 2024/11/20 09:45:34 by albertini        ###   ########.fr       */
+/*   Updated: 2024/11/21 15:16:58 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,8 +62,7 @@ class Fixed
 		//Getters & Setters
 		int getRawBits(void) const;
 		void setRawBits(int const raw);
-		
-		friend std::ostream& operator<<(std::ostream &os, const Fixed &fixed);
 };
+std::ostream& operator<<(std::ostream &os, const Fixed &fixed);
 
 #endif

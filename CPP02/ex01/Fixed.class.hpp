@@ -6,7 +6,7 @@
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 09:33:04 by albertini         #+#    #+#             */
-/*   Updated: 2024/11/19 16:04:03 by falberti         ###   ########.fr       */
+/*   Updated: 2024/11/21 15:17:20 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,8 @@ class Fixed
 		int toInt( void ) const;
 		int getRawBits(void) const;
 		void setRawBits(int const raw);
-		friend std::ostream& operator<<(std::ostream &os, const Fixed &fixed);
 };
+
+std::ostream& operator<<(std::ostream &os, const Fixed &fixed);
 
 #endif
