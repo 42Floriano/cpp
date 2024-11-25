@@ -3,15 +3,15 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: albertini <albertini@student.42.fr>        +#+  +:+       +#+         #
+#    By: falberti <falberti@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/18 15:39:27 by cgodecke          #+#    #+#              #
-#    Updated: 2024/11/18 23:14:58 by albertini        ###   ########.fr        #
+#    Updated: 2024/11/25 11:46:47 by falberti         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 C++ = c++
-C++_FLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
+C++_FLAGS = -Wall -Wextra -Werror -std=c++98
 INFILES = main.cpp\
 			Fixed.class.cpp\
 			
