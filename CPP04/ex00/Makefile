@@ -6,7 +6,7 @@
 #    By: falberti <falberti@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/18 15:39:27 by cgodecke          #+#    #+#              #
-#    Updated: 2024/11/25 13:44:31 by falberti         ###   ########.fr        #
+#    Updated: 2024/11/25 16:03:58 by falberti         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ INFILES = main.cpp\
 
 OBJFILES = $(INFILES:.cpp=.o)
 
-NAME = fragtrap
+NAME = animals
 
 all: $(NAME)
 

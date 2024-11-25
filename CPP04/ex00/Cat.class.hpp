@@ -6,7 +6,7 @@
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 13:45:33 by falberti          #+#    #+#             */
-/*   Updated: 2024/11/25 13:48:47 by falberti         ###   ########.fr       */
+/*   Updated: 2024/11/25 15:59:34 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,13 @@
 # include "Animal.class.hpp"
 
 
-class Cat
+class Cat : public Animal
 {
-	protected:
-
-	public:
-		//Default Constructor
+    private:
+    
+    public:
 		//Constructor
-		Cat(std::string name);
+		Cat(void);
 		//Copy Constructor 
 		Cat(const Cat &value);
    		//Assigment Opperator
@@ -44,7 +43,7 @@ class Cat
 		//Destructor
 		~Cat(void);
 		//Methods
-		//Getters & Setters
+        void    makeSound(void) const;
 };
 
 #endif

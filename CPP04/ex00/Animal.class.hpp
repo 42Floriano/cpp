@@ -6,7 +6,7 @@
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 13:45:39 by falberti          #+#    #+#             */
-/*   Updated: 2024/11/25 13:47:51 by falberti         ###   ########.fr       */
+/*   Updated: 2024/11/25 15:59:22 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@
 class Animal
 {
 	protected:
-
+        std::string _type;
 	public:
-		//Default Constructor
-		//Constructor
-		Animal(std::string name);
+		//Constructors
+        Animal(void);
+		Animal(std::string type);
 		//Copy Constructor 
 		Animal(const Animal &value);
    		//Assigment Opperator
@@ -32,7 +32,10 @@ class Animal
 		//Destructor
 		~Animal(void);
 		//Methods
+        void    makeSound(void) const;
 		//Getters & Setters
+        std::string getType(void) const;
+        void setType(std::string type);
 };
 
 #endif
