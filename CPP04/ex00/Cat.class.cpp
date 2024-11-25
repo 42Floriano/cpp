@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.class.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
+/*   By: albertini <albertini@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 13:45:35 by falberti          #+#    #+#             */
-/*   Updated: 2024/11/25 16:02:29 by falberti         ###   ########.fr       */
+/*   Updated: 2024/11/25 23:14:46 by albertini        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ Cat::~Cat(void)
 }
 
 //methods
-void    Cat::makeSound(void) const
+void    Cat::makeSound(void) const 
 {
     std::cout << "Meoooooow! Vrooom vrooom!" << std::endl;
 }

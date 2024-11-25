@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.class.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
+/*   By: albertini <albertini@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 13:45:31 by falberti          #+#    #+#             */
-/*   Updated: 2024/11/25 16:02:35 by falberti         ###   ########.fr       */
+/*   Updated: 2024/11/25 22:58:12 by albertini        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ Dog::~Dog(void)
 }
 
 //methods
-void    Dog::makeSound(void) const
+void    Dog::makeSound(void) const 
 {
     std::cout << "Woof woof!" << std::endl;
 }

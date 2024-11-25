@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.class.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
+/*   By: albertini <albertini@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 13:45:29 by falberti          #+#    #+#             */
-/*   Updated: 2024/11/25 15:59:38 by falberti         ###   ########.fr       */
+/*   Updated: 2024/11/25 23:14:53 by albertini        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ class Dog : public Animal
 		//Destructor
 		~Dog(void);
 		//Methods
-        void    makeSound(void) const;
+        void    makeSound(void) const ;
 		//Getters & Setters
 };
 
