@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongAnimal.class.hpp                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
+/*   By: albertini <albertini@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 13:45:39 by falberti          #+#    #+#             */
-/*   Updated: 2024/11/26 10:29:30 by falberti         ###   ########.fr       */
+/*   Updated: 2024/11/26 23:34:39 by albertini        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ class WrongAnimal
 		//Destructor
 		virtual ~WrongAnimal(void);
 		//Methods
-        virtual void    makeSound(void) const;
+        void    makeSound(void) const;
 		//Getters & Setters
         std::string getType(void) const;
         void setType(std::string type);
