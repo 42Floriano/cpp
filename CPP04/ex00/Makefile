@@ -5,32 +5,39 @@
 #                                                     +:+ +:+         +:+      #
 #    By: falberti <falberti@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/12/18 15:39:27 by cgodecke          #+#    #+#              #
-#    Updated: 2024/11/25 16:03:58 by falberti         ###   ########.fr        #
+#    Created: 2024/11/18 09:32:09 by albertini         #+#    #+#              #
+#    Updated: 2024/11/26 10:39:23 by falberti         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-C++ = c++
-C++_FLAGS = -Wall -Wextra -Werror -std=c++98
-INFILES = main.cpp\
-			Animal.class.cpp\
-			Cat.class.cpp\
-			Dog.class.cpp\
+NAME = animal_test
 
-OBJFILES = $(INFILES:.cpp=.o)
+SRCS = main.cpp\
+	Animal.class.cpp\
+	Cat.class.cpp\
+	Dog.class.cpp\
+    WrongAnimal.class.cpp\
+	WrongCat.class.cpp\
 
-NAME = animals
+OBJ_DIR = obj
+OBJS = $(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
+
+CXX = c++
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 all: $(NAME)
 
-$(NAME):$(OBJFILES)
-	$(C++) $(C++_FLAGS) $(OBJFILES) -o $(NAME) 
+$(OBJ_DIR):
+	mkdir -p $(OBJ_DIR)
 
-%.o: %.cpp
-	$(C++) $(C++_FLAGS) -c $< -o $@
+$(OBJ_DIR)/%.o: %.cpp | $(OBJ_DIR)
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+$(NAME): $(OBJS)
+	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
 
 clean:
-	rm -f $(OBJFILES)
+	rm -rf $(OBJ_DIR)
 
 fclean: clean
 	rm -f $(NAME)
