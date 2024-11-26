@@ -1,38 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.class.hpp                                      :+:      :+:    :+:   */
+/*   Dog.class.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
+/*   By: albertini <albertini@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/25 13:45:33 by falberti          #+#    #+#             */
-/*   Updated: 2024/11/26 10:46:53 by falberti         ###   ########.fr       */
+/*   Created: 2024/11/25 13:45:29 by falberti          #+#    #+#             */
+/*   Updated: 2024/11/25 23:14:53 by albertini        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_CLASS_HAPP
-# define CAT_CLASS_HAPP
+#ifndef DOG_CLASS_HAPP
+# define DOG_CLASS_HAPP
 
 # include <iostream>
 # include <string>
 # include "Animal.class.hpp"
 
 
-class Cat : public Animal
+class Dog : public Animal
 {
-    private:
-    
-    public:
+	protected:
+
+	public:
+		//Default Constructor
 		//Constructor
-		Cat(void);
+		Dog(void);
 		//Copy Constructor 
-		Cat(const Cat &value);
+		Dog(const Dog &value);
    		//Assigment Opperator
-		Cat &operator=(const Cat &rhs);
+		Dog &operator=(const Dog &rhs);
 		//Destructor
-		~Cat(void);
+		~Dog(void);
 		//Methods
         void    makeSound(void) const ;
+		//Getters & Setters
 };
 
 #endif

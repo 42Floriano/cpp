@@ -1,38 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.class.hpp                                      :+:      :+:    :+:   */
+/*   WrongAnimal.class.hpp                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/25 13:45:33 by falberti          #+#    #+#             */
-/*   Updated: 2024/11/26 10:46:53 by falberti         ###   ########.fr       */
+/*   Created: 2024/11/25 13:45:39 by falberti          #+#    #+#             */
+/*   Updated: 2024/11/26 10:29:30 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_CLASS_HAPP
-# define CAT_CLASS_HAPP
+#ifndef WRONGANIMAL_CLASS_HAPP
+# define WRONGANIMAL_CLASS_HAPP
 
 # include <iostream>
 # include <string>
-# include "Animal.class.hpp"
 
 
-class Cat : public Animal
+class WrongAnimal
 {
-    private:
-    
-    public:
-		//Constructor
-		Cat(void);
+	protected:
+        std::string _type;
+	public:
+		//Constructors
+        WrongAnimal(void);
+		WrongAnimal(std::string type);
 		//Copy Constructor 
-		Cat(const Cat &value);
+		WrongAnimal(const WrongAnimal &value);
    		//Assigment Opperator
-		Cat &operator=(const Cat &rhs);
+		WrongAnimal &operator=(const WrongAnimal &rhs);
 		//Destructor
-		~Cat(void);
+		virtual ~WrongAnimal(void);
 		//Methods
-        void    makeSound(void) const ;
+        virtual void    makeSound(void) const;
+		//Getters & Setters
+        std::string getType(void) const;
+        void setType(std::string type);
 };
 
 #endif

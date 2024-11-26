@@ -1,38 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.class.hpp                                      :+:      :+:    :+:   */
+/*   WrongCat.class.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 13:45:33 by falberti          #+#    #+#             */
-/*   Updated: 2024/11/26 10:46:53 by falberti         ###   ########.fr       */
+/*   Updated: 2024/11/26 10:45:11 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_CLASS_HAPP
-# define CAT_CLASS_HAPP
+#ifndef WRONGCAT_CLASS_HAPP
+# define WRONGCAT_CLASS_HAPP
 
 # include <iostream>
 # include <string>
-# include "Animal.class.hpp"
+# include "WrongAnimal.class.hpp"
 
 
-class Cat : public Animal
+class WrongCat : public WrongAnimal
 {
     private:
     
     public:
 		//Constructor
-		Cat(void);
+		WrongCat(void);
 		//Copy Constructor 
-		Cat(const Cat &value);
+		WrongCat(const WrongCat &value);
    		//Assigment Opperator
-		Cat &operator=(const Cat &rhs);
+		WrongCat &operator=(const WrongCat &rhs);
 		//Destructor
-		~Cat(void);
+		~WrongCat(void);
 		//Methods
-        void    makeSound(void) const ;
 };
 
 #endif
