@@ -1,40 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.class.hpp                                    :+:      :+:    :+:   */
+/*   Bureaucrat.class.hpp                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 13:45:39 by falberti          #+#    #+#             */
-/*   Updated: 2024/11/26 11:01:34 by falberti         ###   ########.fr       */
+/*   Updated: 2025/01/10 14:17:48 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAIN_CLASS_HAPP
-# define BRAIN_CLASS_HAPP
+#ifndef BUREAUCRAT_CLASS_HPP
+# define BUREAUCRAT_CLASS_HPP
 
 # include <iostream>
 # include <string>
 
 
-class Brain
+class Bureaucrat
 {
-	protected:
-        std::string _ideas[100];
+	private:
+        const std::string _name;
+		int	_grade;
 	public:
-		//Constructors
-        Brain(void);
-		Brain(std::string type);
+	//Constructors
+		Bureaucrat(std::string name, int grade);
 		//Copy Constructor 
-		Brain(const Brain &value);
+		Bureaucrat(const Bureaucrat &value);
    		//Assigment Opperator
-		Brain &operator=(const Brain &rhs);
+		Bureaucrat &operator=(const Bureaucrat &rhs);
 		//Destructor
-	    ~Brain(void);
+		~Bureaucrat(void);
 		//Methods
+        void    incrGrade(void);
+		void    decrGrade(void);
+		void 	changeGrade(int grade);
 		//Getters & Setters
-        void setIdea(int index, const std::string& idea);
-        std::string getIdea(int index) const;
+        std::string getName(void) const;
+		int	getGrade(void) const;
+        //void setName(std::string name);
+		void setGrade(int grade);
+
 };
 
 #endif

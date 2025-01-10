@@ -6,7 +6,7 @@
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 13:45:33 by falberti          #+#    #+#             */
-/*   Updated: 2024/11/26 10:44:52 by falberti         ###   ########.fr       */
+/*   Updated: 2024/11/26 11:09:12 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,13 @@
 # include <iostream>
 # include <string>
 # include "Animal.class.hpp"
+# include "Brain.class.hpp"
 
 
 class Cat : public Animal
 {
     private:
-    
+		Brain *_brain;
     public:
 		//Constructor
 		Cat(void);
@@ -32,7 +33,9 @@ class Cat : public Animal
 		//Destructor
 		~Cat(void);
 		//Methods
-        void    makeSound(void) const ;
+        void    makeSound(void) const;
+		void	setIdea(int index, const std::string &idea);
+		std::string	getIdea(int index) const;
 };
 
 #endif
