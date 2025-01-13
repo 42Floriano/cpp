@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongCat.class.cpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
+/*   By: albertini <albertini@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 13:45:35 by falberti          #+#    #+#             */
-/*   Updated: 2024/11/26 10:40:52 by falberti         ###   ########.fr       */
+/*   Updated: 2024/11/26 23:36:08 by albertini        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,3 +38,8 @@ WrongCat::~WrongCat(void)
 }
 
 //methods
+
+void    WrongCat::makeSound(void) const
+{
+    std::cout << "Wrong Cat makes some Meooow! " << std::endl;
+}

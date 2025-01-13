@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongCat.class.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
+/*   By: albertini <albertini@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 13:45:33 by falberti          #+#    #+#             */
-/*   Updated: 2024/11/26 10:47:14 by falberti         ###   ########.fr       */
+/*   Updated: 2024/11/26 23:35:02 by albertini        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ class WrongCat : public WrongAnimal
 		//Destructor
 		~WrongCat(void);
 		//Methods
+		void    makeSound(void) const;
 };
 
 #endif
