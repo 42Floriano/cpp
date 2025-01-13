@@ -6,7 +6,7 @@
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 13:45:39 by falberti          #+#    #+#             */
-/*   Updated: 2025/01/10 14:17:48 by falberti         ###   ########.fr       */
+/*   Updated: 2025/01/13 15:43:50 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,25 +22,38 @@ class Bureaucrat
 	private:
         const std::string _name;
 		int	_grade;
+		
 	public:
+	
+	class GradeTooHighException : public std::exception{
+		public:
+		virtual const char* what() const throw();
+	};
+	class GradeTooLowException : public std::exception{
+		public:
+		virtual const char* what() const throw();
+	};
+	
 	//Constructors
+		Bureaucrat();
 		Bureaucrat(std::string name, int grade);
 		//Copy Constructor 
 		Bureaucrat(const Bureaucrat &value);
    		//Assigment Opperator
 		Bureaucrat &operator=(const Bureaucrat &rhs);
 		//Destructor
-		~Bureaucrat(void);
+		virtual ~Bureaucrat(void);
 		//Methods
         void    incrGrade(void);
 		void    decrGrade(void);
-		void 	changeGrade(int grade);
+		//void 	changeGrade(int grade);
 		//Getters & Setters
-        std::string getName(void) const;
+        const std::string& getName(void) const;
+		//void setGrade(int grade);
 		int	getGrade(void) const;
-        //void setName(std::string name);
-		void setGrade(int grade);
-
 };
+
+// Non-member overload of << operator
+std::ostream& operator<<(std::ostream& out, const Bureaucrat& bureaucrat);
 
 #endif

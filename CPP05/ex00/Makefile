@@ -6,18 +6,14 @@
 #    By: falberti <falberti@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/18 09:32:09 by albertini         #+#    #+#              #
-#    Updated: 2024/11/26 10:39:23 by falberti         ###   ########.fr        #
+#    Updated: 2025/01/13 15:35:26 by falberti         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = animal_test
+NAME = BureauCrat
 
 SRCS = main.cpp\
-	Animal.class.cpp\
-	Cat.class.cpp\
-	Dog.class.cpp\
-    WrongAnimal.class.cpp\
-	WrongCat.class.cpp\
+	Bureaucrat.class.cpp\
 
 OBJ_DIR = obj
 OBJS = $(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
