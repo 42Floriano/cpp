@@ -6,7 +6,7 @@
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 13:45:39 by falberti          #+#    #+#             */
-/*   Updated: 2025/02/24 13:58:09 by falberti         ###   ########.fr       */
+/*   Updated: 2025/02/27 11:48:59 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <iostream>
 # include <string>
+# include "Form.class.hpp"
 
 
 class Bureaucrat
@@ -46,6 +47,7 @@ class Bureaucrat
 		//Methods
         void    incrGrade(void);
 		void    decrGrade(void);
+		void	signForm(Form& form);
 		//void 	changeGrade(int grade);
 		//Getters & Setters
         const std::string& getName(void) const;

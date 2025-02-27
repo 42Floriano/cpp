@@ -6,7 +6,7 @@
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 13:45:41 by falberti          #+#    #+#             */
-/*   Updated: 2025/02/24 14:06:32 by falberti         ###   ########.fr       */
+/*   Updated: 2025/02/27 11:43:21 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,15 @@ Bureaucrat::~Bureaucrat(void)
 }
 
 //methods
+
+void Bureaucrat::signForm(Form& form) {
+    try {
+        form.beSigned(*this);
+        std::cout << _name << " signed " << form.getName() << std::endl;
+    } catch (const std::exception& e) {
+        std::cout << _name << " couldn't sign " << form.getName() << " because " << e.what() << std::endl;
+    }
+}
 
 // Exceptions
 const char* Bureaucrat::GradeTooHighException::what() const throw() {
