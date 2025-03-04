@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Form.class.cpp                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/25 13:45:39 by falberti          #+#    #+#             */
+/*   Updated: 2025/03/04 13:58:02 by falberti         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Form.class.hpp"
 
 // Exception messages
@@ -30,7 +42,7 @@ Form& Form::operator=(const Form& rhs) {
 Form::~Form() {}
 
 // Methods
-void Form::beSigned(const Bureaucrat& bureaucrat) {
+void Form::beSigned(Bureaucrat& bureaucrat) {
     if (bureaucrat.getGrade() > _signGrade)
         throw GradeTooLowException();
     _isSigned = true;

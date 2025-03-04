@@ -5,6 +5,8 @@
 #include <iostream>
 #include <string>
 
+class Bureaucrat;
+
 class Form {
 private:
     const std::string _name;
@@ -32,7 +34,7 @@ public:
     virtual ~Form();
 
     // Methods
-    void beSigned(const Bureaucrat& bureaucrat);
+    void beSigned(Bureaucrat &bureaucrat);
 
     // Getters
     const std::string& getName() const;
