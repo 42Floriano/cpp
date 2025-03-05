@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.class.hpp                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
+/*   By: floriano <floriano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 13:45:39 by falberti          #+#    #+#             */
-/*   Updated: 2025/03/04 15:18:12 by falberti         ###   ########.fr       */
+/*   Updated: 2025/03/05 17:34:04 by floriano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <string>
 # include "AForm.class.hpp"
 
-class Form;
+class AForm;
 
 
 class Bureaucrat
@@ -49,7 +49,7 @@ class Bureaucrat
 		//Methods
         void    incrGrade(void);
 		void    decrGrade(void);
-		void	signForm(Form& form);
+		void	signForm(AForm& form);
 		void	executeForm(AForm const &form) const;
 		//void 	changeGrade(int grade);
 		//Getters & Setters

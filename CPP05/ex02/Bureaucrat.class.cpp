@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.class.cpp                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
+/*   By: floriano <floriano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 13:45:41 by falberti          #+#    #+#             */
-/*   Updated: 2025/03/04 15:09:26 by falberti         ###   ########.fr       */
+/*   Updated: 2025/03/05 17:34:28 by floriano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ Bureaucrat::~Bureaucrat(void)
 
 //methods
 
-void Bureaucrat::signForm(Form& form) {
+void Bureaucrat::signForm(AForm& form) {
     try {
         form.beSigned(*this);
         std::cout << _name << " signed " << form.getName() << std::endl;
@@ -56,6 +56,10 @@ void Bureaucrat::signForm(Form& form) {
 }
 
 void Bureaucrat::executeForm(AForm const &form) const {
+    if (!form.isSigned()) {
+        std::cout << _name << " couldn't execute " << form.getName() << " because the form is not signed." << std::endl;
+        return;
+    }
     try {
         form.execute(*this);
         std::cout << _name << " executed " << form.getName() << std::endl;

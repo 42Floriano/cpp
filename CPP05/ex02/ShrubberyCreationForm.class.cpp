@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ShrubberyCreationForm.class.hpp                    :+:      :+:    :+:   */
+/*   ShrubberyCreationForm.class.cpp                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
+/*   By: floriano <floriano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 14:24:47 by falberti          #+#    #+#             */
-/*   Updated: 2025/03/04 15:04:19 by falberti         ###   ########.fr       */
+/*   Updated: 2025/03/05 17:32:38 by floriano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,11 @@ void ShrubberyCreationForm::execute(Bureaucrat const& executor) const {
         std::cerr << "Error: Could not create file." << std::endl;
         return;
     }
-    outfile << "      /\" << std::endl;
-    outfile << "     /  \" << std::endl;
-    outfile << "    /    \" << std::endl;
-    outfile << "   /      \" << std::endl;
-    outfile << "  /________\" << std::endl;
+    outfile << "      /\\ " << std::endl;
+    outfile << "     /  \\ " << std::endl;
+    outfile << "    /    \\ " << std::endl;
+    outfile << "   /      \\ " << std::endl;
+    outfile << "  /________\\ " << std::endl;
     outfile.close();
     std::cout << "Shrubbery has been created in " << _target << "_shrubbery" << std::endl;
 }

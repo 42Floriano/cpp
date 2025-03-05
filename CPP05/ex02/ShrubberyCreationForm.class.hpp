@@ -1,4 +1,7 @@
 /* ************************************************************************** */
+
+#ifndef FE7AE82B_4DB8_401E_8A1F_6923669F8431
+#define FE7AE82B_4DB8_401E_8A1F_6923669F8431
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ShrubberyCreationForm.class.cpp                    :+:      :+:    :+:   */
@@ -16,7 +19,7 @@
 #include "AForm.class.hpp"
 #include <fstream>
 
-class ShrubberyCreationForm : public Aform{
+class ShrubberyCreationForm : public AForm{
 private:
     std::string _target;
 public:
@@ -29,3 +32,6 @@ public:
 };
 
 #endif
+
+
+#endif /* FE7AE82B_4DB8_401E_8A1F_6923669F8431 */
