@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScalarConverter.class.hpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: floriano <floriano@student.42.fr>          +#+  +:+       +#+        */
+/*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/07 12:08:36 by floriano          #+#    #+#             */
-/*   Updated: 2025/03/07 12:16:31 by floriano         ###   ########.fr       */
+/*   Updated: 2025/03/12 13:31:24 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,14 @@
 
 # include <iostream>
 # include <string>
+# include "whichType.cpp"
+
+# define MIN_INT std::numeric_limits<int>::min()
+# define MAX_INT std::numeric_limits<int>::max()
+# define MIN_FLOAT std::numeric_limits<float>::min()
+# define MAX_FLOAT std::numeric_limits<float>::max()
+# define MIN_DOUBLE std::numeric_limits<double>::min()
+# define MAX_DOUBLE std::numeric_limits<double>::max()
 
 enum e_type {
 	SPECIAL = 0,
@@ -27,13 +35,20 @@ enum e_type {
 
 class ScalarConverter{
   private:
-
-  public:
 	ScalarConverter();
 	ScalarConverter(const ScalarConverter &value);
-	ScalarConverter operator=(const ScalarConverter& rhs);
+  public:
+	ScalarConverter &operator=(const ScalarConverter& rhs);
 	~ScalarConverter();
-	e_type converters(std::string value);
+	static void convert(const std::string& str);
 };
+
+	e_type converters(std::string value);
+	void printSpecial(const std::string& str);
+	void convertChar(const std::string& str, size_t& len);
+	void convertInt(const std::string& str);
+	void convertFloat(const std::string& str);
+	void convertDouble(const std::string& str);
+
 
 #endif

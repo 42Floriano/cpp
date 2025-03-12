@@ -6,13 +6,16 @@
 #    By: falberti <falberti@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/18 09:32:09 by albertini         #+#    #+#              #
-#    Updated: 2025/03/06 17:25:50 by falberti         ###   ########.fr        #
+#    Updated: 2025/03/12 12:52:20 by falberti         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = Convertor
 
 SRCS = main.cpp\
+	converters.cpp\
+	ScalarConverter.class.cpp\
+	whichType.cpp\
 	
 OBJ_DIR = obj
 OBJS = $(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
