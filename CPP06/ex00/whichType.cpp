@@ -6,7 +6,7 @@
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 13:16:36 by falberti          #+#    #+#             */
-/*   Updated: 2025/03/19 11:23:24 by falberti         ###   ########.fr       */
+/*   Updated: 2025/03/19 13:54:52 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ static int	isChar(const std::string& str, size_t& len)
 {
 	if (len == 1 && !isdigit(str[0]))
 		return 1;
+	if (len > 1 && (isdigit(str[0]) || str.find('.') != std::string::npos))
+        return 0;
 	if (len == 3 && str[0] == '\'' && str[2] == '\'')
 		return 1;
 	return 0;

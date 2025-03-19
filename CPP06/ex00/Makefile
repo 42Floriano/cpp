@@ -6,11 +6,11 @@
 #    By: falberti <falberti@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/18 09:32:09 by albertini         #+#    #+#              #
-#    Updated: 2025/03/12 12:52:20 by falberti         ###   ########.fr        #
+#    Updated: 2025/03/19 13:45:39 by falberti         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Convertor
+NAME = converter
 
 SRCS = main.cpp\
 	converters.cpp\
@@ -21,7 +21,7 @@ OBJ_DIR = obj
 OBJS = $(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
 
 CXX = c++
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror -g -std=c++98
 
 all: $(NAME)
 

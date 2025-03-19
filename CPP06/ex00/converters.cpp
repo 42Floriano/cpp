@@ -6,7 +6,7 @@
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 10:29:08 by falberti          #+#    #+#             */
-/*   Updated: 2025/03/19 11:25:21 by falberti         ###   ########.fr       */
+/*   Updated: 2025/03/19 13:58:35 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,29 +50,40 @@ void convertChar(const std::string& str, size_t& len){
         std::cout << "Non displayable" << std::endl;
 }
 
-void convertInt(const std::string& str){
-    long l = std::atol(str.c_str());
-    std::cout << "char: ";
-    if (l < 0 || 1 > 127)
-        std::cout << "impossible" << std::endl;
-    else 
-    {
-        if (isprint(l))
-            std::cout << "'" << static_cast<char>(1) << "'" << std::endl;
-        else 
-            std::cout << "Non displayable" << std::endl;
-    }
-    std::cout << "int: ";
-    if (l < MIN_INT || l > MAX_INT)
-        std::cout << "impossible" << std::endl;
-    else
-        std::cout << static_cast<int>(1) << std::endl;
-    std::cout << "float: " << static_cast<float>(1) << ".0f" << std::endl;
-    std::cout << "float: " << static_cast<double>(1) << ".0" << std::endl;
+void convertInt(const std::string& str) {
+    char* end;
+    long l = std::strtol(str.c_str(), &end, 10);
+
+    // Check for invalid input
+    if (*end != '\0') {
+        std::cout << "invalid input" << std::endl;
+        return;
     }
 
+    std::cout << "char: ";
+    if (l < 0 || l > 127) {
+        std::cout << "impossible" << std::endl;
+    } else {
+        if (l >= 0 && l <= 255 && isprint(static_cast<unsigned char>(l))) {
+            std::cout << "'" << static_cast<char>(l) << "'" << std::endl;
+        } else {
+            std::cout << "Non displayable" << std::endl;
+        }
+    }
+
+    std::cout << "int: ";
+    if (l < MIN_INT || l > MAX_INT) {
+        std::cout << "impossible" << std::endl;
+    } else {
+        std::cout << static_cast<int>(l) << std::endl;
+    }
+
+    std::cout << "float: " << static_cast<float>(l) << ".0f" << std::endl;
+    std::cout << "double: " << static_cast<double>(l) << ".0" << std::endl;
+}
+
 void convertFloat(const std::string& str){
-    	float	f = std::atof(str.c_str());
+    float	f = std::atof(str.c_str());
 	bool	tolerance = std::fabs(f - static_cast<int>(f)) < 0.0000000000001;
 
 	std::cout << "char: ";
