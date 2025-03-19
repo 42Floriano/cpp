@@ -6,7 +6,7 @@
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/07 12:08:36 by floriano          #+#    #+#             */
-/*   Updated: 2025/03/12 13:31:24 by falberti         ###   ########.fr       */
+/*   Updated: 2025/03/19 11:28:37 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,10 @@
 
 # include <iostream>
 # include <string>
-# include "whichType.cpp"
+# include <exception>
+# include <cstdlib>
+# include <limits>
+# include <cmath>
 
 # define MIN_INT std::numeric_limits<int>::min()
 # define MAX_INT std::numeric_limits<int>::max()
@@ -42,8 +45,7 @@ class ScalarConverter{
 	~ScalarConverter();
 	static void convert(const std::string& str);
 };
-
-	e_type converters(std::string value);
+	e_type whichType(const std::string& str, size_t& len);
 	void printSpecial(const std::string& str);
 	void convertChar(const std::string& str, size_t& len);
 	void convertInt(const std::string& str);

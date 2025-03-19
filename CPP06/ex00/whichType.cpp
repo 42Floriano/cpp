@@ -6,11 +6,11 @@
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 13:16:36 by falberti          #+#    #+#             */
-/*   Updated: 2025/03/12 13:26:09 by falberti         ###   ########.fr       */
+/*   Updated: 2025/03/19 11:23:24 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScalarConverter.hpp"
+#include "ScalarConverter.class.hpp"
 
 static int	isSpecial(const std::string& str)
 {
@@ -68,7 +68,7 @@ static int	isFloat(const std::string& str, size_t& len, size_t& dot)
 
 e_type whichType(const std::string& str, size_t& len){
     size_t dot = str.find('.');
-    size_t f = str.fiinf('f');
+    size_t f = str.find('f');
     if (dot == std::string::npos){
         if (isSpecial(str))
             return SPECIAL;
@@ -77,10 +77,10 @@ e_type whichType(const std::string& str, size_t& len){
         if(isInt(str, len))
             return INT;
     }
-    if (f != std::string::npos && dat != std::string::npos){
+    if (f != std::string::npos && dot != std::string::npos){
         if(isFloat(str, len, dot))
             return FLOAT;
-    } else if (f == std::string::npos && dot != std::string:npos)
+    } else if (f == std::string::npos && dot != std::string::npos)
         return DOUBLE;
     return INVALID;
 }
