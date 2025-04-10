@@ -6,7 +6,7 @@
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 14:30:19 by falberti          #+#    #+#             */
-/*   Updated: 2025/04/10 14:50:39 by falberti         ###   ########.fr       */
+/*   Updated: 2025/04/10 15:03:54 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,10 @@ int main(){
         << " date age: " << database.age
         << std::endl;
     
+    std::cout
+        << "Deserialized pointer: " << &database
+        << std::endl;
+    
     uintptr_t raw = Serializer::serialize(&database);
     std::cout 
         << "Serial (raw): " << raw
@@ -35,5 +39,6 @@ int main(){
         << "Name: " << original->name
         << " Age: " << original->age
         << std::endl;
+        
     return (0);
 }
