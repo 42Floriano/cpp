@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: floriano <floriano@student.42.fr>          +#+  +:+       +#+        */
+/*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 17:48:15 by floriano          #+#    #+#             */
-/*   Updated: 2025/03/05 18:25:31 by floriano         ###   ########.fr       */
+/*   Updated: 2025/03/25 13:58:51 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int main() {
     std::cout << "--- Testing Intern Form Creation ---" << std::endl;
     
     Intern intern;
-    Bureaucrat boss("Boss", 1);
+    Bureaucrat boss("Boss", 150);
     
     // Valid forms
     AForm* form1 = intern.makeForm("shrubbery creation", "Garden");
