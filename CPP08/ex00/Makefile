@@ -6,11 +6,11 @@
 #    By: falberti <falberti@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/18 09:32:09 by albertini         #+#    #+#              #
-#    Updated: 2025/04/15 13:58:05 by falberti         ###   ########.fr        #
+#    Updated: 2025/04/23 12:38:08 by falberti         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = template_class
+NAME = easyfind
 
 SRCS = main.cpp
 	
