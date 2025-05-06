@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: floriano <floriano@student.42.fr>          +#+  +:+       +#+         #
+#    By: falberti <falberti@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/18 09:32:09 by albertini         #+#    #+#              #
-#    Updated: 2025/04/16 10:11:14 by floriano         ###   ########.fr        #
+#    Updated: 2025/05/06 15:00:32 by falberti         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = template_class
+NAME = mutantStack
 
-SRCS = main.cpp
+SRCS = main.cpp\
 	
 OBJ_DIR = obj
 OBJS = $(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
