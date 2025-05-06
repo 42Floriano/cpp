@@ -6,7 +6,7 @@
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 13:11:39 by falberti          #+#    #+#             */
-/*   Updated: 2025/04/23 13:23:05 by falberti         ###   ########.fr       */
+/*   Updated: 2025/05/06 14:11:51 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <string>
 # include <vector>
 # include <algorithm>
+# include <limits>
 
 class Span{
     private:
@@ -29,10 +30,17 @@ class Span{
     Span &operator=(const Span& rhs);
     ~Span();
 
-    void addNumnber(int n);
+    void addNumber(unsigned int n);
+    template <typename It>
+    void addNumber(It begin, It end){
+        if (_numbers.size() + std::distance(begin, end) > _capacity)
+            throw std::runtime_error("Span has not enough space !");
+        _numbers.insert(_numbers.end(), begin, end);
+    }
     
-    int shortestSpan(void);
-    int longestSpan(void);
-    void get
-}
+    int shortestSpan(void) const;
+    int longestSpan(void) const;
+    int getNumber(unsigned int index);
+};
+
 #endif

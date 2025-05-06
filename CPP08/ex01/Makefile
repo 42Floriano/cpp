@@ -6,13 +6,14 @@
 #    By: falberti <falberti@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/18 09:32:09 by albertini         #+#    #+#              #
-#    Updated: 2025/04/15 13:58:05 by falberti         ###   ########.fr        #
+#    Updated: 2025/05/06 14:15:00 by falberti         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = template_class
+NAME = span
 
-SRCS = main.cpp
+SRCS = main.cpp\
+	Span.class.cpp\
 	
 OBJ_DIR = obj
 OBJS = $(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
