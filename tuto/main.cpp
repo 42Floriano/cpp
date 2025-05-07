@@ -74,9 +74,12 @@ class Vect{
     Vect(int x, int y);
     Vect(const Vect& other);
     Vect& operator=(const Vect& rhs);
+   // std::string operator<<(const Vect& vec);
+    int operator[](int p);
     ~Vect();
     Vect operator+(Vect);
     void get_result(void);
+    std::string to_string(void) const;
 };
 
 Vect::Vect(){};
@@ -98,6 +101,19 @@ Vect Vect::operator+(const Vect param){
     return temp;
 }
 
+std::string Vect::to_string() const{
+    return "{" + std::to_string(_x) + "," + std::to_string(_y) + "}";
+}
+
+int Vect::operator[](int p){
+    return (p == 0) ? this->_x : this->_y;
+}
+
+std::ostream& operator<<(std::ostream& os, const Vect& vec){
+    os << vec.to_string();
+    return os;
+}
+
 void Vect::get_result(void){
     std::cout << "{" << _x << "," << _y << "}" << "\n";
 }
@@ -106,12 +122,13 @@ void Vect::get_result(void){
 int main(void){
 
     Vect vec1(5, 5);
-    Vect vec2(5, 5);
+    Vect vec2(6, 3);
     Vect vec3;
 
     //vec3 = vec1 + vec2;
     vec3 = vec1.operator+(vec2);
-    vec3.get_result();
+    //vec3.get_result();
+    std::cout << vec3 << std::endl;
 
     // Ctest *ptest;
     // Ctest test(2, 9);
