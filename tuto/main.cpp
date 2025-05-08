@@ -65,53 +65,110 @@
 //     std::cout << this->_y << std::endl;
 // }
 
-class Vect{
+// class Vect{
+//     private:
+//         int _x;
+//         int _y;
+//     public:
+//     Vect();
+//     Vect(int x, int y);
+//     Vect(const Vect& other);
+//     Vect& operator=(const Vect& rhs);
+//     ~Vect();
+//     Vect operator+(Vect);
+//     void get_result(void);
+// };
+
+class Square;
+class Polygone;
+
+class Polygone{
     private:
-        int _x;
-        int _y;
+        int  _height;
+        int _width;
     public:
-    Vect();
-    Vect(int x, int y);
-    Vect(const Vect& other);
-    Vect& operator=(const Vect& rhs);
-    ~Vect();
-    Vect operator+(Vect);
-    void get_result(void);
+    Polygone();
+    ~Polygone();
+    void setvalue(int a, int b);
+    std::string getstr() const;
+    virtual int calculate()=0;
+    void print_height(){
+        std::cout << this->_height << " and " << this->_width << std::endl;
+    }
 };
 
-Vect::Vect(){};
-Vect::Vect(int x, int y) : _x(x), _y(y){}
-Vect::Vect(const Vect& other){
-    _x = other._x; _y = other._y;
+Polygone::Polygone(){}
+Polygone::~Polygone(){}
+
+void Polygone::setvalue(int a, int b){
+    _height = a; _width = b;
 }
-Vect& Vect::operator=(const Vect& rhs){
-    if (this != &rhs){
-        _x = rhs._x;
-        _y = rhs._y;
+class Square : public Polygone{
+    public:
+    int calculate(){
+        return (9);
     }
-    return *this;
-}
-Vect::~Vect(){}
+    // Square();
+    // ~Square();
 
-Vect Vect::operator+(const Vect param){
-    Vect temp(_x + param._x, _y + param._y);
-    return temp;
+};
+
+std::string Polygone::getstr(void) const {
+    std::string res;
+    std::ostringstream int1;
+    std::ostringstream int2;
+    int1 << _height;
+    int2 << _width;
+    res = "{" + int1.str() + "," + int2.str() + "}";
+    return res;
 }
 
-void Vect::get_result(void){
-    std::cout << "{" << _x << "," << _y << "}" << "\n";
+std::ostream & operator<<(std::ostream& out, const Polygone& obj){
+    out << obj.getstr();
+    return out;
 }
+
+// Vect::Vect(){};
+// Vect::Vect(int x, int y) : _x(x), _y(y){}
+// Vect::Vect(const Vect& other){
+//     _x = other._x; _y = other._y;
+// }
+// Vect& Vect::operator=(const Vect& rhs){
+//     if (this != &rhs){
+//         _x = rhs._x;
+//         _y = rhs._y;
+//     }
+//     return *this;
+// }
+// Vect::~Vect(){}
+
+// Vect Vect::operator+(const Vect param){
+//     Vect temp(_x + param._x, _y + param._y);
+//     return temp;
+// }
+
+// void Vect::get_result(void){
+//     std::cout << "{" << _x << "," << _y << "}" << "\n";
+// }
 
 
 int main(void){
 
-    Vect vec1(5, 5);
-    Vect vec2(5, 5);
-    Vect vec3;
+    Square sqr;
+    Polygone *psquare;
+    psquare = &sqr;
+    psquare->setvalue(2, 3);
+    psquare->print_height();
+    //std::cout << poly.calculate() << std::endl;
 
-    //vec3 = vec1 + vec2;
-    vec3 = vec1.operator+(vec2);
-    vec3.get_result();
+
+    // Vect vec1(5, 5);
+    // Vect vec2(5, 5);
+    // Vect vec3;
+
+    // //vec3 = vec1 + vec2;
+    // vec3 = vec1.operator+(vec2);
+    // vec3.get_result();
 
     // Ctest *ptest;
     // Ctest test(2, 9);
