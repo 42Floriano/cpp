@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <sstream>
+#include <exception>
 
 //using namespace std
 
@@ -91,6 +92,9 @@ class Polygone{
     ~Polygone();
     void setvalue(int a, int b);
     std::string getstr() const;
+    // virtual const char* what() const throw(){
+    //     return "Error";
+    // };
     virtual int calculate()=0;
     void print_height(){
         std::cout << this->_height << " and " << this->_width << std::endl;
@@ -103,15 +107,31 @@ Polygone::~Polygone(){}
 void Polygone::setvalue(int a, int b){
     _height = a; _width = b;
 }
+
 class Square : public Polygone{
     public:
-    int calculate(){
-        return (9);
-    }
     // Square();
     // ~Square();
-
+    int calculate();
+    class MyEx : public std::exception{
+        private:
+        int _code;
+        public:
+        MyEx(int n) throw();
+        virtual const char* what() const throw();
+    };
 };
+
+Square::MyEx::MyEx(int n) throw() : _code(n){}
+
+const char* Square::MyEx::what() const throw(){
+    return (_code == 1) ? "Yes" : "No";
+}
+
+int Square::calculate(){
+    throw MyEx(0);
+    return 1;
+}
 
 std::string Polygone::getstr(void) const {
     std::string res;
@@ -159,6 +179,11 @@ int main(void){
     psquare = &sqr;
     psquare->setvalue(2, 3);
     psquare->print_height();
+    try{
+        sqr.calculate();
+    } catch(const std::exception& e){
+        std::cout << e.what() << std::endl;
+    }
     //std::cout << poly.calculate() << std::endl;
 
 
