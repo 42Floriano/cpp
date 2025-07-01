@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   PmergeMe.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: floriano <floriano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/11 13:33:52 by falberti          #+#    #+#             */
-/*   Updated: 2025/07/01 17:56:31 by floriano         ###   ########.fr       */
+/*   Created: 2025/07/01 17:37:03 by floriano          #+#    #+#             */
+/*   Updated: 2025/07/01 17:44:12 by floriano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "RPN.hpp"
-#include <iostream>
+#include "PmergeMe.hpp"
 
-int main(int ac, char **av){
-    if (ac != 2){
-        std::cerr << "Usage: ./RPN \"<expression>\" " << std::endl;
-        return 1;
+PmergeMe::PmergeMe(){}
+PmergeMe::PmergeMe(const PmergeMe& other){
+    (void) other;
+}
+PmergeMe& PmergeMe::operator=(const PmergeMe& rhs){
+    if (this != &rhs){
+
     }
-    try {
-        rpn resolver;
-        int res = resolver.evaluate(av[1]);
-        std::cout << res << std::endl;
-    } catch (const std::exception& e){
-        std::cerr << e.what() << std::endl;
-        return 1;
-    }
-    return 0;
+    return *this;
+}
+PmergeMe::~PmergeMe(){}
+
+void PmergeMe::resolve(const std::string& av){
+    
 }
