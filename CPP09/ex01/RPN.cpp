@@ -6,7 +6,7 @@
 /*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/01 14:08:50 by falberti          #+#    #+#             */
-/*   Updated: 2025/07/01 15:35:31 by falberti         ###   ########.fr       */
+/*   Updated: 2025/07/01 16:05:24 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,16 +24,6 @@ rpn& rpn::operator=(const rpn& rhs){
     return *this;
 }
 rpn::~rpn(){}
-
-std::string rpn::removeSpaces(const std::string& input){
-    std::string res;
-    for (std::string::const_iterator it = input.begin(); it != input.end(); ++it) {
-        if (!std::isspace(*it)) {
-            res += *it;
-        }
-    }
-    return res;
-}
 
 bool rpn::isNum(const std::string& s){
     return s.length() == 1 && std::isdigit(s[0]);
