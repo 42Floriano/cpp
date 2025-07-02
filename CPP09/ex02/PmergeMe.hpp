@@ -8,6 +8,7 @@
 #include <vector>
 #include <sys/time.h>
 #include <stdexcept>
+#include <set>
 
 class PmergeMe {
 	private:
@@ -18,7 +19,7 @@ class PmergeMe {
 		void insertionSort(std::deque<int>& deq, int left, int right);
 
 		void merge(std::vector<int>& vec, int left, int mid, int right);
-		void merge(std::vector<int>& vec, int left, int mid, int right);
+		void merge(std::deque<int>& deq, int left, int mid, int right);
 
 	public:
 		PmergeMe();

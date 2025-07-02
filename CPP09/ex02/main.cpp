@@ -3,21 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: floriano <floriano@student.42.fr>          +#+  +:+       +#+        */
+/*   By: falberti <falberti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 13:33:52 by falberti          #+#    #+#             */
-/*   Updated: 2025/07/01 18:12:20 by floriano         ###   ########.fr       */
+/*   Updated: 2025/07/02 13:43:22 by falberti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PmergeMe.hpp"
 #include <iostream>
 
-static long getTimeMs(){
-	struct timeval tv;
-	gettimeofday(&tv, 0);
-	return tv.tv_sec * 1000 + tv.tv_usec / 1000;
+//Microseconds
+static long getTimeMs() {
+    struct timeval tv;
+    gettimeofday(&tv, 0);
+    return tv.tv_sec * 1000000 + tv.tv_usec;
 }
+
+// //Nano
+// static long getTimeMs(){
+// 	struct timeval tv;
+// 	gettimeofday(&tv, 0);
+// 	return (static_cast<long long>(tv.tv_sec) * 1000000LL) + tv.tv_usec;
+// }
 
 int main(int ac, char **av){
 	if (ac < 2){
@@ -58,8 +66,8 @@ int main(int ac, char **av){
 			}
 		std::cout << std::endl;
 
-		std::cout << "Time to process a range of " << vec.size() << " elements with std::vector : " << (endVec - startVec) << " ms" << std::endl;
-		std::cout << "Time to process a range of " << deq.size() << " elements with std::deque  : " << (endDeq - startDeq) << " ms" << std::endl;
+		std::cout << "Time to process a range of " << vec.size() << " elements with std::vector : " << (endVec - startVec) << " microseconds" << std::endl;
+		std::cout << "Time to process a range of " << deq.size() << " elements with std::deque  : " << (endDeq - startDeq) << " microseconds" << std::endl;
 
 		} catch (const std::exception& e){
 			std::cerr << e.what() << std::endl;
