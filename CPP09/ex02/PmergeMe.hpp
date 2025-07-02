@@ -11,6 +11,14 @@
 
 class PmergeMe {
 	private:
+		void mergeInsertSort(std::vector<int>& vec, int left, int right);
+		void mergeInsertSort(std::deque<int>& deq, int left, int right);
+
+		void insertionSort(std::vector<int>& vec, int left, int right);
+		void insertionSort(std::deque<int>& deq, int left, int right);
+
+		void merge(std::vector<int>& vec, int left, int mid, int right);
+		void merge(std::vector<int>& vec, int left, int mid, int right);
 
 	public:
 		PmergeMe();
