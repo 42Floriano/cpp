@@ -1,34 +1,32 @@
 #ifndef PMERGEME_HPP
 #define PMERGEME_HPP
 
-#include <string>
-#include <iostream>
-#include <cstdlib>
-#include <deque>
 #include <vector>
-#include <sys/time.h>
-#include <stdexcept>
+#include <deque>
 #include <set>
+#include <sys/time.h>
+#include <iostream>
+#include <utility> // for pair
+#include <stdexcept>
+
+#include <algorithm> // for std::lower_bound
 
 class PmergeMe {
-	private:
-		void mergeInsertSort(std::vector<int>& vec, int left, int right);
-		void mergeInsertSort(std::deque<int>& deq, int left, int right);
+public:
+    PmergeMe();
+    PmergeMe(const PmergeMe& other);
+    PmergeMe& operator=(const PmergeMe& rhs);
+    ~PmergeMe();
 
-		void insertionSort(std::vector<int>& vec, int left, int right);
-		void insertionSort(std::deque<int>& deq, int left, int right);
+    void solve(std::vector<int>& vec);
+    void solve(std::deque<int>& deq);
 
-		void merge(std::vector<int>& vec, int left, int mid, int right);
-		void merge(std::deque<int>& deq, int left, int mid, int right);
-
-	public:
-		PmergeMe();
-		PmergeMe(const PmergeMe& other);
-		PmergeMe& operator=(const PmergeMe& rhs);
-		~PmergeMe();
-
-		void solve(std::vector<int>& vec);
-		void solve(std::deque<int>& dec);
+private:
+    static bool pairMaxCompare(const std::pair<int, int>& a, const std::pair<int, int>& b);
+    void recursiveSort(std::vector<int>& vec);
+    void recursiveSort(std::deque<int>& deq);
+    void fordJohnsonSort(std::vector<int>& vec);
+    void fordJohnsonSort(std::deque<int>& deq);
 };
 
-#endif 
+#endif // PMERGEME_HPP
